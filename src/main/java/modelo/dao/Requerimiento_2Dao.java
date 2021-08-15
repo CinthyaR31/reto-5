@@ -13,15 +13,13 @@ public class Requerimiento_2Dao {
     public ArrayList<Requerimiento_2Vo> requerimiento2() throws SQLException {
         Connection connection = JDBCUtilities.getConnection();
         ArrayList<Requerimiento_2Vo> listado_registros_rq2 = new ArrayList<Requerimiento_2Vo>();
-        String sql = "SELECT l.ID_Lider ,l.Nombre ,l.Primer_Apellido , AVG(l.Salario) PromedioSalario FROM Lider l GROUP BY l.ID_Lider ,l.Nombre ,l.Primer_Apellido ORDER BY PromedioSalario DESC ;";
+        String sql = "SELECT p.ID_Proyecto, mc.Nombre_Material FROM  Compra c INNER JOIN Proyecto p ON p.ID_Proyecto = c.ID_Proyecto INNER JOIN MaterialConstruccion mc ON mc.ID_MaterialConstruccion = c.ID_MaterialConstruccion WHERE p.ID_Proyecto IN (12,15,18) ORDER BY p.ID_Proyecto DESC;";
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
 
                 Requerimiento_2Vo requerimiento2 = new Requerimiento_2Vo();
-                requerimiento2.setID_Lider(rs.getInt("ID_Lider"));
-                requerimiento2.setNombre(rs.getString("Nombre"));
-                requerimiento2.setPrimer_Apellido(rs.getString("Primer_Apellido"));
-                requerimiento2.setPromedioSalario(rs.getDouble("PromedioSalario"));
+                requerimiento2.setID_Proyecto(rs.getInt("ID_Proyecto"));
+                requerimiento2.setNombre_Material(rs.getString("Nombre_Material"));
 
                 listado_registros_rq2.add(requerimiento2);
             }
