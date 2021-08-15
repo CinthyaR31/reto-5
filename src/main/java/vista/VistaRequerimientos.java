@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import controlador.ControladorRequerimientos;
 import modelo.vo.Requerimiento_1Vo;
 import modelo.vo.Requerimiento_2Vo;
+import modelo.vo.Requerimiento_3Vo;
 
 public class VistaRequerimientos {
 
@@ -32,6 +33,8 @@ public class VistaRequerimientos {
 
     public static void requerimiento3() {
         try {
+            ArrayList<Requerimiento_3Vo> resultado_requerimiento3 = controlador.consultarRequerimiento3();
+            resultado_requerimiento3.forEach(System.out::println);
             // Su código
         } catch (Exception e) {
             System.err.println(e);
