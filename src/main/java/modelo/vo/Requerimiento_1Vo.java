@@ -3,40 +3,59 @@ package modelo.vo;
 //p.ID_Proyecto , p.Constructora, p.Numero_Habitaciones 
 
 public class Requerimiento_1Vo {
-    private Integer idProyecto;
-    private String constructora;
-    private Integer habitaciones;
+    private Integer ID_Lider;
+    private String Nombre;
+    private String Primer_Apellido; 
+    private Double PromedioSalario; 
+
 
     public Requerimiento_1Vo() {
     }
-
-    public Integer getIdProyecto() {
-        return idProyecto;
+    
+    
+    public Integer getID_Lider() {
+        return ID_Lider;
     }
 
-    public void setIdProyecto(Integer idProyecto) {
-        this.idProyecto = idProyecto;
+
+    public void setID_Lider(Integer iD_Lider) {
+        ID_Lider = iD_Lider;
     }
 
-    public String getConstructora() {
-        return constructora;
+
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setConstructora(String constructora) {
-        this.constructora = constructora;
+
+    public void setNombre(String nombre) {
+        Nombre = nombre;
     }
 
-    public Integer getHabitaciones() {
-        return habitaciones;
+
+    public String getPrimer_Apellido() {
+        return Primer_Apellido;
     }
 
-    public void setHabitaciones(Integer habitaciones) {
-        this.habitaciones = habitaciones;
+
+    public void setPrimer_Apellido(String primer_Apellido) {
+        Primer_Apellido = primer_Apellido;
     }
+
+
+    public Double getPromedioSalario() {
+        return PromedioSalario;
+    }
+
+
+    public void setPromedioSalario(Double promedioSalario) {
+        PromedioSalario = promedioSalario;
+    }
+
 
     @Override
     public String toString() {
-        return idProyecto + " " + constructora + " " + habitaciones;
+        return ID_Lider + " | " +  Nombre +  " | " + Primer_Apellido + " | " + PromedioSalario;
     }
 
 }

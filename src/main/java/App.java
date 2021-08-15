@@ -10,10 +10,10 @@ public class App {
        System.out.println("Requerimiento 1");
         VistaRequerimientos.requerimiento1();       
 
-        System.out.println("Requerimiento 2");
+      /*  System.out.println("Requerimiento 2");
         VistaRequerimientos.requerimiento2();
 
         System.out.println("Requerimiento 3");
-        VistaRequerimientos.requerimiento3(); 
+        VistaRequerimientos.requerimiento3(); */
     }
 }
