@@ -40,7 +40,7 @@ public class Requerimiento_2Vo {
 
     @Override
     public String toString() {
-        return ID_Proyecto + " | " +  Nombre_Material;
+        return ID_Proyecto + " " +  Nombre_Material;
     }
 
 }

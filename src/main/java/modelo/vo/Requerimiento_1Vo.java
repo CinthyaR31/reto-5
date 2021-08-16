@@ -6,7 +6,7 @@ public class Requerimiento_1Vo {
     private Integer ID_Lider;
     private String Nombre;
     private String Primer_Apellido; 
-    private Double PromedioSalario; 
+    private Integer PromedioSalario; 
 
 
     public Requerimiento_1Vo() {
@@ -43,19 +43,19 @@ public class Requerimiento_1Vo {
     }
 
 
-    public Double getPromedioSalario() {
+    public Integer getPromedioSalario() {
         return PromedioSalario;
     }
 
 
-    public void setPromedioSalario(Double promedioSalario) {
+    public void setPromedioSalario(Integer promedioSalario) {
         PromedioSalario = promedioSalario;
     }
 
 
     @Override
     public String toString() {
-        return ID_Lider + " | " +  Nombre +  " | " + Primer_Apellido + " | " + PromedioSalario;
+        return ID_Lider + " " +  Nombre +  " " + Primer_Apellido + " " + PromedioSalario;
     }
 
 }

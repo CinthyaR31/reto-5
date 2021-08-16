@@ -67,7 +67,7 @@ public class Requerimiento_3Vo {
 
     @Override
     public String toString() {
-        return ID_Proyecto + " | " +  Ciudad +  " | " + Nombre;
+        return ID_Proyecto + " " +  Ciudad +  " " + Nombre;
     }
 
 }
