@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import modelo.vo.Requerimiento_1Vo;
+import modelo.vo.Requerimiento_2Vo;
 
 /**
  *
@@ -43,6 +44,7 @@ public class AppReportes extends javax.swing.JFrame {
         this.jTablaMateriales.setModel(tblMateriales);
 
         this.cargarLideres();
+        this.cargarMateriales();
 
     }
 
@@ -60,7 +62,17 @@ public class AppReportes extends javax.swing.JFrame {
         }
     }
     
-    
+    private void cargarMateriales() throws SQLException{
+        ArrayList<Requerimiento_2Vo> resultado_requerimiento1 = controlador.consultarRequerimiento2();
+
+        String[] informacionTabla = new String[4];
+
+        for (int i = 0; i < resultado_requerimiento1.size(); i++) {
+            informacionTabla[0] = String.valueOf(resultado_requerimiento1.get(i).getID_Proyecto());
+            informacionTabla[1] = resultado_requerimiento1.get(i).getNombre_Material();
+            tblMateriales.addRow(informacionTabla);
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
