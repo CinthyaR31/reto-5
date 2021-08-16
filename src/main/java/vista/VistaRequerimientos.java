@@ -3,6 +3,7 @@ package vista;
 import java.util.ArrayList;
 
 import controlador.ControladorRequerimientos;
+import java.sql.SQLException;
 import modelo.vo.Requerimiento_1Vo;
 import modelo.vo.Requerimiento_2Vo;
 import modelo.vo.Requerimiento_3Vo;
@@ -40,5 +41,16 @@ public class VistaRequerimientos {
             System.err.println(e);
         }
     }
+
+    
+   public static void mostrarAppVentanaInicial(){
+       AppVentanaInicial appVentanaInicial = new AppVentanaInicial();
+       appVentanaInicial.setVisible(true);
+   }
+   
+   public static void mostrarAppReportes() throws SQLException{
+       AppReportes appReportes = new AppReportes();
+       appReportes.setVisible(true);
+   }
 
 }
