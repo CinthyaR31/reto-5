@@ -5,6 +5,10 @@
  */
 package vista;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Cinthya Rojas
@@ -80,11 +84,15 @@ public class AppVentanaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+        VistaRequerimientos.mostrarFormularioLideres();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        VistaRequerimientos.mostrarAppReportes();
+        try {
+            VistaRequerimientos.mostrarAppReportes();
+        } catch (SQLException ex) {
+            Logger.getLogger(AppVentanaInicial.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**

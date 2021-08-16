@@ -53,4 +53,9 @@ public class VistaRequerimientos {
        appReportes.setVisible(true);
    }
 
+   public static void mostrarFormularioLideres(){
+       AppFormularioLideres appFormularioLideres = new AppFormularioLideres();
+       appFormularioLideres.setVisible(true);
+   }
+   
 }
